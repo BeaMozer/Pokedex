@@ -1,8 +1,15 @@
 import React from "react";
-import PokemonDetailPage from "../../Pages/PokemonDetailPage/PokemonDetailPage";
 import { Card } from "./PokemonCardStyle";
+import { useNavigate } from "react-router";
+import { goToDetail } from "../../Router/Coordinator";
 
 const PokemonCard = () => {
+  const navigate = useNavigate();
+
+  const capturado = () => {
+    alert("GOTCHA! O Pokemon foi adicionao a sua Pokedex");
+  };
+
   return (
     <>
       <h1>Todos Pokemons</h1>
@@ -10,11 +17,10 @@ const PokemonCard = () => {
         <div className="cards">
           <h1>POKE CARD</h1>
           <div>
-            <p>adicionar</p>
-            <p>detalhes</p>
+            <button onClick={capturado}>Capturar</button>
+            <button onClick={() => goToDetail(navigate)}>Detalhes</button>
           </div>
         </div>
-        {/* <PokemonDetailPage /> */}
       </Card>
     </>
   );

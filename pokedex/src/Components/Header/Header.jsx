@@ -1,16 +1,28 @@
-import React from "react";
-import PokedexPage from "../../Pages/PokedexPage/PokedexPage";
+import React, { useState } from "react";
 import { Headers } from "./HeaderStyle";
+import { useNavigate } from "react-router";
+import { goToPokedex } from "../../Router/Coordinator";
+import PokemonsListPage from "../../Pages/PokemonsListPage/PokemonListPage";
+import PokemonDetailPage from "../../Pages/PokemonDetailPage/PokemonDetailPage";
 
-const Header = ({ changeScreen }) => {
-  const pagePokedex = () => {
-    changeScreen("pokedex");
-  };
+const Header = () => {
+  const navigate = useNavigate();
+
+  // const [inicialButton, setInicialButton] = useState(<PokemonDetailPage />);
+
+  // const deletePokedex = () => {
+  //   setInicialButton(<PokemonsListPage />);
+  // };
 
   return (
     <Headers>
       <h1>POKEMON</h1>
-      <button onClick={pagePokedex}>Meus Pokemons</button>
+      <button onClick={() => goToPokedex(navigate)}>Pokédex</button>
+      {/* {inicialButton ? (
+        <button onClick={() => goToPokedex(navigate)}>Pokédex</button>
+      ) : (
+        <button onClick={deletePokedex}>Excluir da Pokedex</button>
+      )} */}
     </Headers>
   );
 };

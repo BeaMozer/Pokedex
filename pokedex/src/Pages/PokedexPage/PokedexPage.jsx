@@ -1,14 +1,15 @@
 import React from "react";
 import PokemonCard from "../../Components/PokemonCard/PokemonCard";
+import { useNavigate } from "react-router";
+import { goToList } from "../../Router/Coordinator";
 
-const PokedexPage = ({ changeScreen }) => {
-  const pagePokedex = () => {
-    changeScreen("listPage");
-  };
-
+const PokedexPage = () => {
+  const navigate = useNavigate();
   return (
     <div>
-      <button onClick={pagePokedex}>Voltar para a lista de pokemons</button>
+      <button onClick={() => goToList(navigate)}>
+        Voltar para a lista de pokemons
+      </button>
       <h1>Pokedex</h1>
       <PokemonCard />
     </div>

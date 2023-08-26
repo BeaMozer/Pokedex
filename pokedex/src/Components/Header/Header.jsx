@@ -8,12 +8,6 @@ import PokemonDetailPage from "../../Pages/PokemonDetailPage/PokemonDetailPage";
 const Header = () => {
   const navigate = useNavigate();
 
-  // const [inicialButton, setInicialButton] = useState(<PokemonDetailPage />);
-
-  // const deletePokedex = () => {
-  //   setInicialButton(<PokemonsListPage />);
-  // };
-
   return (
     <Headers>
       <h1>POKEMON</h1>

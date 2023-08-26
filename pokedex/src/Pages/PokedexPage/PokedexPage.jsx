@@ -7,9 +7,7 @@ const PokedexPage = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <button onClick={() => goToList(navigate)}>
-        Voltar para a lista de pokemons
-      </button>
+      <button onClick={() => goToList(navigate)}> Todos Pokemons</button>
       <h1>Pokedex</h1>
       <PokemonCard />
     </div>

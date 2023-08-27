@@ -3,17 +3,25 @@ import { styled } from "styled-components";
 export const Headers = styled.header`
   display: flex;
   width: 100%;
-  justify-content: center;
-  font-size: 1.6rem;
+  height: 16rem;
   align-items: center;
-  height: 5rem;
+  gap: 25rem;
+  justify-content: center;
 
-  h1 {
-    display: flex;
-    justify-content: center;
-    margin-right: 50rem;
+  .image {
+    margin-left: 55rem;
   }
 
   button {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #33a4f5;
+    width: 28.7rem;
+    height: 7.4rem;
+    margin-left: 5rem;
+    border-radius: 0.8rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    font-family: "Poppins";
   }
 `;

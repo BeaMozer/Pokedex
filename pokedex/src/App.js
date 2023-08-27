@@ -1,24 +1,23 @@
 import { createGlobalStyle } from "styled-components";
 import { Router } from "./Router/Router";
+import { ChakraBaseProvider } from "@chakra-ui/react";
 
 function App() {
   const GlobalStyled = createGlobalStyle`
+
   html {
-    
-    /* font-size: 62.5%; */
+    font-size: 62.5%;
+      
   }
 
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
 `;
 
   return (
     <div>
-      <GlobalStyled />
-      <Router />
+      <ChakraBaseProvider>
+        <GlobalStyled />
+        <Router />
+      </ChakraBaseProvider>
     </div>
   );
 }

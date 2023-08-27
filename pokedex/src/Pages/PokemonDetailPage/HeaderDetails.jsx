@@ -1,7 +1,8 @@
 import React from "react";
 import { goToList, goToPokedex } from "../../Router/Coordinator";
-import { Headers } from "../../Components/Header/HeaderStyle";
 import { useNavigate } from "react-router-dom";
+import logo from "../../assets/logo.png";
+import { Header } from "./HeaderDetailsStyle";
 
 const HeaderDetails = () => {
   const navigate = useNavigate();
@@ -11,11 +12,17 @@ const HeaderDetails = () => {
   };
   return (
     <div>
-      <Headers>
-        <button onClick={() => goToList(navigate)}>Todos Pokemons</button>
-        <h1>POKEMON</h1>
-        <button onClick={deletePokedex}>Excluir da Pokedex</button>
-      </Headers>
+      <Header>
+        <div className="return-button">
+          <button onClick={() => goToList(navigate)}>
+            ❮ <span>Todos Pokemons</span>{" "}
+          </button>
+        </div>
+        <img src={logo} alt="" />
+        <div className="delete-button">
+          <button onClick={deletePokedex}>Excluir da Pokedex</button>
+        </div>
+      </Header>
     </div>
   );
 };

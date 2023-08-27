@@ -9,7 +9,7 @@ const PokedexPage = () => {
     <div>
       <button onClick={() => goToList(navigate)}> Todos Pokemons</button>
       <h1>Pokedex</h1>
-      <PokemonCard />
+      {/* <PokemonCard /> */}
     </div>
   );
 };
